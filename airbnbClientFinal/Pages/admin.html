@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="../Scripts/ajaxCalls.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"></script>
+      <script src="../Scripts/main.js" defer></script>
+
+
+    <!-- data tables scripts -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+      
+
+    <!-- data tables styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css">
+  
+
+
+    <script src="../Scripts/admin.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'></link>  
+    <link rel="stylesheet" href="../CSS/mainStyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/icons8-hut-24.png" type="image/x-icon" />
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="loader-wrapper">
+      <div class="loader"></div>
+    </div>
+    <h1>Aribnb</h1>
+    <h2>Matan & Yael & Neta- admin view</h2>
+    <div class="container">
+      
+    <div id="data">
+      <div id="myContainer">
+          <form id="pForm">
+              <table id="usersTable" class="display nowrap" style="width:100%">
+                  <thead>
+                      <tr>
+                          <th>Email</th>
+                          <th>First name</th>
+                          <th>Last name</th>
+                          <th>Password</th>
+                          <th>Is active</th>
+                      </tr>
+                  </thead>
+              </table>
+          </form>
+      </div>
+  </div>
+  <div id="filter">
+      <h2>Report</h2>
+      <label for="monthsDropdown">Choose a month:</label>
+      <select id="monthsDropdown" name="months">
+          <option value="1">January</option>
+          <option value="2">February</option>
+          <option value="3">March</option>
+          <option value="4">April</option>
+          <option value="5">May</option>
+          <option value="6">June</option>
+          <option value="7">July</option>
+          <option value="8">August</option>
+          <option value="9">September</option>
+          <option value="10">October</option>
+          <option value="11">November</option>
+          <option value="12">December</option>
+      </select>
+      <button type="button" id="btnShowAverage">Show average price</button>
+      <div id="results">
+
+      </div>
+    </div>
+  </div>
+    
+    <script>
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          var loaderWrapper = document.querySelector(".loader-wrapper");
+          loaderWrapper.style.display = "none";
+        }, 500);
+      });
+    </script>
+  </body>
+</html>

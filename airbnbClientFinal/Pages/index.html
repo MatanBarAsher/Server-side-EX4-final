@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../Scripts/ajaxCalls.js"></script>
+    <script src="/Scripts/index.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'></link>  
+    <link rel="stylesheet" href="../CSS/mainStyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/icons8-hut-24.png" type="image/x-icon" />
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="loader-wrapper">
+      <div class="loader"></div>
+    </div>
+    <h1>Aribnb</h1>
+    <h2>Matan & Yael & Neta</h2>
+    <div class="container" id="login_container">
+      <button id="btnLogin">Log in</button>
+      <h3>New here?</h3>
+      <form id="register-form">
+        <table>
+          <tbody>
+            <tr>
+              <td>First name:</td>
+              <td>
+                <input
+                  type="text"
+                  name="firstName"
+                  id="inpFirstName"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Family name:</td>
+              <td>
+                <input
+                  type="text"
+                  name="familyName"
+                  id="inpFamilyName"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Email:</td>
+              <td><input type="email" required id="inpEmail" /></td>
+            </tr>
+            <tr>
+              <td>Password:</td>
+              <td>
+                <input
+                  type="password"
+                  name="password"
+                  id="inpPassword"
+                  required
+                  
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <button type="submit">Register</button>
+      </form>
+    </div>
+    <dialog id="loginModal">
+      <h2>Log in</h2>
+      <form id="modal-form">
+        <table>
+          <tbody>
+            <tr>
+              <td>Email:</td>
+              <td><input type="email" required id="loginEmail" /></td>
+            </tr>
+            <tr>
+              <td>Password:</td>
+              <td>
+                <input
+                  type="password"
+                  name="password"
+                  id="loginPassword"
+                  required
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <button type="submit" id="btnModalLogin">Log in</button>
+        <button id="btnModalClose">Close</button>
+      </form>
+    </dialog>
+    <script>
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          var loaderWrapper = document.querySelector(".loader-wrapper");
+          loaderWrapper.style.display = "none";
+        }, 500);
+      });
+    </script>
+  </body>
+</html>
