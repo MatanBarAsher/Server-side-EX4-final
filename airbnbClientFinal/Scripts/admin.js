@@ -40,7 +40,7 @@ function renderUsers(usersData) {
     }
     tbl = $("#usersTable").DataTable({
       data: usersData,
-      pageLength: 15,
+      pageLength: 30,
       columns: [
         { data: "email" },
         { data: "firstName" },
